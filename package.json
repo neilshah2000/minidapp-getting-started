@@ -1,0 +1,27 @@
+{
+  "name": "minidapp-getting-started",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "esbuild src/main.js --bundle --outfile=src/bundle.js",
+    "move-files": "cp src/bundle.js app && cp src/index.css app && cp src/index.html app",
+    "build-zip": "cd app && zip -r start.zip . && mv start.zip ../"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neilshah2000/minidapp-getting-started.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neilshah2000/minidapp-getting-started/issues"
+  },
+  "homepage": "https://github.com/neilshah2000/minidapp-getting-started#readme",
+  "dependencies": {
+    "@minima-global/mds-api": "^0.1.25"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.42"
+  }
+}
